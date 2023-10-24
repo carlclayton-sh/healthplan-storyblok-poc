@@ -9,7 +9,7 @@ interface Props {
 }
 
 const Page = ({ blok }: Props) => (
-  <main {...storyblokEditable(blok)}>
+  <main className="text-center mt-4" {...storyblokEditable(blok)}>
     {(blok.body as SbBlokData[]).map((nestedBlok) => (
       <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
     ))}

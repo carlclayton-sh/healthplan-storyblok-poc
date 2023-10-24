@@ -5,7 +5,11 @@ interface Props {
 }
 
 const Teaser = ({ blok }: Props) => {
-  return <h2 {...storyblokEditable(blok)}>{blok.headline as string}</h2>;
+  return (
+    <h2 className="text-2xl mb-10" {...storyblokEditable(blok)}>
+      {blok.headline as string}
+    </h2>
+  );
 };
 
 export default Teaser;

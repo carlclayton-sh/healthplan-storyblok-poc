@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  env: {
+    storyblokApiToken: "MtiELhNLrZfv9WzAWOGEOgtt",
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

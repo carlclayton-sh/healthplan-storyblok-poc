@@ -1,16 +1,17 @@
 import { ISbStoriesParams, getStoryblokApi } from "@storyblok/react/rsc";
+import StoryblokStory from "@storyblok/react/story";
 
 export default async function Home() {
   const { data } = await fetchData();
 
   return (
     <div>
-      <h1>Story: {data.story.name}</h1>
+      <StoryblokStory story={data.story} />
     </div>
   );
 }
 
-async function fetchData() {
+export async function fetchData() {
   let sbParams = { version: "draft" } as ISbStoriesParams;
 
   const storyblokApi = getStoryblokApi();
